@@ -13,10 +13,10 @@
 
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-bucket-eks-auto-uniqueid"
-    key            = "eks-auto-mode/terraform.tfstate"
+    bucket         = "peas3bucket"
+    key            = "peas3bucket/terraform.tfstate"
     dynamodb_table = "terraform-lock"
-    region         = "us-east-1"
+    region         = "eu-central-1"
     encrypt        = false
   }
 }
